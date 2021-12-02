@@ -11,7 +11,7 @@ Begin by using the [create-react-app] package. You'll use the command below to
 create a React application.
 
 ```sh
-npx create-react-app my-app --template @appacademy/simple
+npx create-react-app my-app 
 ```
 
 Take note that using the `create-react-app` command initializes your project as
@@ -277,7 +277,6 @@ used it to store state and handle events.
 
 
 [create-react-app]: https://github.com/facebook/create-react-app
-[Live Demo]: https://appacademy.github.io/curriculum/calculator/
 [JSX]: https://reactjs.org/docs/introducing-jsx.html
 [`className`]: https://developer.mozilla.org/en-US/docs/Web/API/Element/className
 [Babel]: https://babeljs.io/docs/en/next/
