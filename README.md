@@ -269,11 +269,6 @@ render(){
 
 Congratulations! You've created your first React application!
 
-### What you've learned
-
-In this small project, you created your first React class-based component and
-used it to store state and handle events.
-
 
 
 [create-react-app]: https://github.com/facebook/create-react-app
