@@ -5,13 +5,13 @@ shows the result of a simple operation on the numbers when you click the
 operation button. Take a look at the [Live Demo] to see the app in action.
 Assume that only numbers will be entered.
 
-## Phase 1: Setup
+## Step1: Setup
 
 Begin by using the [create-react-app] package. You'll use the command below to
 create a React application.
 
 ```sh
-npx create-react-app my-app 
+npx create-react-app my-app
 ```
 
 Take note that using the `create-react-app` command initializes your project as
@@ -42,7 +42,7 @@ content:
 
 ```js
 // App.js
-import React from 'react';
+import React from "react";
 
 function App() {
   return (
@@ -61,7 +61,7 @@ and see how the same view is rendered in `http://localhost:3000/`:
 
 ```js
 // App.js
-import React from 'react';
+import React from "react";
 
 const App = () => {
   return (
@@ -69,7 +69,7 @@ const App = () => {
       <h1>Calculator</h1>
     </div>
   );
-}
+};
 
 export default App;
 ```
@@ -78,7 +78,7 @@ In addition, you can use parentheses to implicitly return the `App` component:
 
 ```js
 // App.js
-import React from 'react';
+import React from "react";
 
 const App = () => (
   <div className="App">
@@ -106,7 +106,7 @@ element with the JSX.
 Congratulations! You now have a basic React application set up with a component
 that you understand how to render.
 
-## Phase 2: Creating the `Calculator` component
+## Step2: Creating the `Calculator` component
 
 Now create a file called `Calculator.js` within your `src` directory. Start
 with the code skeleton below:
@@ -156,7 +156,7 @@ constructor(props) {
 }
 ```
 
-## Phase 3: Rendering in your component
+## Step3: Rendering in your component
 
 The first thing you want to render is your `result`. Notice how your
 `Calculator` and `App` components are rendering JSX elements in different ways.
@@ -176,7 +176,7 @@ like this:
   }
 ```
 
-## Phase 4: Creating input fields
+## Step4: Creating input fields
 
 Let's make the input fields. You want the `state` to receive the new value of
 the input field every time something is typed in. You can do this by passing an
@@ -187,7 +187,7 @@ component. Begin by console logging the _change_ event that is passed into the
 callback.
 
 ```js
-handleFirstNum = e => {
+handleFirstNum = (e) => {
   console.log(e);
 };
 ```
@@ -212,10 +212,10 @@ to use [this.setState()] in order to set a component's state and re-render the
 component with the updated state.
 
 ```js
-handleFirstNum = e => {
+handleFirstNum = (e) => {
   // TODO: Parse value
   // TODO: Set state
-}
+};
 ```
 
 You also want your input fields to always reflect the current version of the
@@ -225,7 +225,7 @@ make sure to include `value={this.state.num1}` in the input tag.
 That's one of the inputs! Create a second `<input>` element and a
 `handleSecondNum()` callback. It should look very similar.
 
-## Phase 5: Creating calculator buttons
+## Step5: Creating calculator buttons
 
 Time to write the operations. Each one of these is a button, with an `onClick`
 callback set that carries out the operation and sets the state of the result to
@@ -250,7 +250,7 @@ having the value depend on the state, you ensure that the value will be
 re-rendered, and therefore be properly cleared when you set the state of `num1`
 and `num2` back to empty strings.
 
-## Phase 6: Refactoring your project
+## Step6: Refactoring your project
 
 You're probably using the values stored in your state a few times in your
 `render` method. Let's DRY it up a little. Destructure the properties stored
@@ -267,18 +267,14 @@ render(){
 }
 ```
 
-Congratulations! You've created your first React application!
-
-
-
 [create-react-app]: https://github.com/facebook/create-react-app
-[JSX]: https://reactjs.org/docs/introducing-jsx.html
-[`className`]: https://developer.mozilla.org/en-US/docs/Web/API/Element/className
-[Babel]: https://babeljs.io/docs/en/next/
-[ReactDOM.render()]: https://reactjs.org/docs/react-dom.html
+[jsx]: https://reactjs.org/docs/introducing-jsx.html
+[`classname`]: https://developer.mozilla.org/en-US/docs/Web/API/Element/className
+[babel]: https://babeljs.io/docs/en/next/
+[reactdom.render()]: https://reactjs.org/docs/react-dom.html
 [class component]: https://reactjs.org/docs/react-component.html
-[this.setState()]: https://reactjs.org/docs/react-component.html#setstate
-[ES6 arrow function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+[this.setstate()]: https://reactjs.org/docs/react-component.html#setstate
+[es6 arrow function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 [class properties]: https://reactjs.org/docs/faq-functions.html#class-properties-stage-3-proposal
 [target]: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
-[currentTarget]: https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
+[currenttarget]: https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
